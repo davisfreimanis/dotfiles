@@ -2,6 +2,10 @@
 
 dotfiles_dir=~/dotfiles
 
+# Cloning submodules
+git submodule init
+git submodule update
+
 # Deleting old dotfiles
 sudo rm -rm ~/.vim > /dev/null 2>&1
 sudo rm -rf ~/.vimrc > /dev/null 2>&1
@@ -10,8 +14,10 @@ sudo rm -rf ~/.tmux.conf > /dev/null 2>&1
 
 # Linking new dotfiles
 ln -sf $dotfiles_dir/vim/vimrc ~/.vimrc
-ln -sf $dotfiles_dir/vim/bundle ~/.vim/bundle
-echo "Vundle installed. Run :PluginInstall to install plugins"
+mkdir -p ~/.vim/bundle
+ln -sf $dotfiles_dir/vim/bundle/Vundle.vim ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
+echo "Vundle installed."
 
 ln -sf $dotfiles_dir/zsh/zshrc ~/.zshrc
 ln -sf $dotfiles_dir/tmux/tmux.conf ~/.tmux.conf
