@@ -13,11 +13,10 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-
-" add all your plugins here (note older versions of Vundle
-" used Bundle instead of Plugin)
-
-" ...
+Plugin 'vim-scripts/indentpython.vim'
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'nvie/vim-flake8'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -25,6 +24,9 @@ filetype plugin indent on    " required
 """"""""""""
 " VUNDLE END
 """"""""""""
+
+" UTF-8 encoding
+set encoding=utf-8
 
 " Enables syntax processing
 syntax enable
@@ -40,7 +42,6 @@ set softtabstop=4
 
 " Tabs are spaces
 " set expandtab
-
 " Show a cursor line
 set cursorline
 
@@ -64,3 +65,14 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 " Leader is comma
 let mapleader=","
+
+" Python PEP8 indenting
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
+
