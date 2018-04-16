@@ -13,10 +13,10 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Plugin 'vim-scripts/indentpython.vim'
-"Plugin 'Valloric/YouCompleteMe'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'nvie/vim-flake8'
+Plugin 'vim-scripts/indentpython.vim' "Indentation
+Plugin 'Valloric/YouCompleteMe' "Code completion
+Plugin 'vim-syntastic/syntastic' "Syntax checker
+Plugin 'nvie/vim-flake8' "Linting
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
