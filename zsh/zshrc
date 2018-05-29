@@ -1,3 +1,14 @@
+: '
+PROFILE_STARTUP=true
+if [[ "$PROFILE_STARTUP" == true ]]; then
+    zmodload zsh/zprof # Output load-time statistics
+    # http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
+    PS4=$'%D{%M%S%.} %N:%i> '
+    exec 3>&2 2>"${XDG_CACHE_HOME:-$HOME/tmp}/zsh_statup.$$"
+    setopt xtrace prompt_subst
+fi
+'
+
 # Path to your oh-my-zsh installation.
 export ZSH=/home/davis/.oh-my-zsh
 
@@ -21,16 +32,16 @@ ZSH_THEME="af-magic"
 COMPLETION_WAITING_DOTS="true"
 
 # Virtualenvwrapper
-export WORKON_HOME=~/Envs
-source /usr/bin/virtualenvwrapper.sh
+# export WORKON_HOME=~/Envs
+# source /usr/bin/virtualenvwrapper.sh
 
 # oh-my-zsh plugins
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 plugins=(
   git
   extract
-  virtualenv
-  virtualenvwrapper
+  # virtualenv
+  # virtualenvwrapper
   tmux
 )
 
@@ -59,4 +70,11 @@ fi
 # Yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-alias python=/usr/bin/python
+
+: '
+if [[ "$PROFILE_STARTUP" == true ]]; then
+    zprof
+    unsetopt xtrace
+    exec 2>&3 3>&-
+fi
+'
