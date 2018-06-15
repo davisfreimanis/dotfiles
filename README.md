@@ -20,3 +20,6 @@ Install oh-my-zsh
 ## Installing dotfiles
 
 `./setup.sh`
+
+### Git
+To finish the setup of the gitconfig, the user has to add git credentials to the file git/gitconfig.local.sample
