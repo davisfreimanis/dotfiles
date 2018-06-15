@@ -1,6 +1,3 @@
 [include]
 	# Load the local gitconfig containing information about the user.
 	path = .gitconfig.local
-[user]
-	email = davis@gmail.com
-	name = Davis Freimanis
