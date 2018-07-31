@@ -1,3 +1,6 @@
 [include]
 	# Load the local gitconfig containing information about the user.
 	path = .gitconfig.local
+
+[core]
+	editor = vim

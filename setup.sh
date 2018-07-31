@@ -6,6 +6,9 @@ dotfiles_dir=~/dotfiles
 git submodule init
 git submodule update
 
+# Download Tmux plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # Deleting old dotfiles
 sudo rm -rm ~/.vim > /dev/null 2>&1
 sudo rm -rf ~/.vimrc > /dev/null 2>&1
