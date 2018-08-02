@@ -13,7 +13,7 @@ fi
 export ZSH=/home/davis/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
-ZSH_THEME="af-magic"
+ZSH_THEME="bira"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -38,10 +38,11 @@ COMPLETION_WAITING_DOTS="true"
 # oh-my-zsh plugins
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 plugins=(
-  git
+  docker
   extract
-  # virtualenv
-  # virtualenvwrapper
+  git
+  helm
+  kubectl
   tmux
 )
 
@@ -78,3 +79,13 @@ if [[ "$PROFILE_STARTUP" == true ]]; then
     exec 2>&3 3>&-
 fi
 '
+
+export KUBE_NAMESPACE=edasfrs
+export KUBECONFIG=/home/davis/kubernetes/admin.conf
+alias pods='kubectl get po --namespace $KUBE_NAMESPACE'
+alias hl='helm list --namespace $KUBE_NAMESPACE'
+alias hi='helm install --namespace $KUBE_NAMESPACE .'
+alias k='kubectl'
+alias kn='kubectl -n $KUBE_NAMESPACE'
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
