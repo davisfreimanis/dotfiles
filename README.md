@@ -5,9 +5,10 @@
 * oh-my-zsh
 * tmux
 * curl
+* xclip
 
 ## Installing requirements
-`sudo apt-get install -y zsh git tmux curl`
+`sudo apt-get install -y zsh git tmux curl xclip`
 
 Set the default shell to zsh and then relog the user
 
