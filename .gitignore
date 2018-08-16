@@ -1,2 +1,2 @@
 *.local
-*.local.sample
+git/gitconfig.local.sample

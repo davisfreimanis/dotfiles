@@ -13,7 +13,7 @@ fi
 export ZSH=/home/davis/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
-ZSH_THEME="bira"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -47,6 +47,10 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# Powerline prompt in zsh
+# Location can be found with the command `pip3 show powerline-status`
+# . /home/davis/.local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # Anaconda
 export PATH="$HOME/anaconda3/bin:$PATH"
@@ -84,8 +88,10 @@ export KUBE_NAMESPACE=edasfrs
 export KUBECONFIG=/home/davis/kubernetes/admin.conf
 alias pods='kubectl get po --namespace $KUBE_NAMESPACE'
 alias hl='helm list --namespace $KUBE_NAMESPACE'
-alias hi='helm install --namespace $KUBE_NAMESPACE .'
+alias hi='helm install --name linnaeus --namespace $KUBE_NAMESPACE .'
+alias hd='helm delete --purge linnaeus'
 alias k='kubectl'
 alias kn='kubectl -n $KUBE_NAMESPACE'
+alias kd='kn delete --all pods --grace-period=0 --force'
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
