@@ -10,7 +10,7 @@ git submodule update
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Deleting old dotfiles
-sudo rm -rm ~/.vim > /dev/null 2>&1
+sudo rm -rf ~/.vim > /dev/null 2>&1
 sudo rm -rf ~/.vimrc > /dev/null 2>&1
 sudo rm -rf ~/.zshrc > /dev/null 2>&1
 sudo rm -rf ~/.tmux.conf > /dev/null 2>&1
