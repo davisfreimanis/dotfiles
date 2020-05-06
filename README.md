@@ -32,4 +32,11 @@ To finish the setup of the gitconfig, the user has to add git credentials to the
 
 Install tmux plugins by issuing the command `prefix + I` when inside tmux environment.
 
+## Mac OSX settings
+
+Install Brew
+
+Run `brew bundle install` to install brew formulas.
+
+Use `iterm2` terminal. Make sure that Powerline glyphs are enabled in the font preferences.
 
