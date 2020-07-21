@@ -31,8 +31,9 @@ set encoding=utf-8
 " Enables syntax processing
 syntax enable
 
-" Show line numbers
+" Show line numbers and set to relative
 set number
+set relativenumber
 
 " Number of visual spaces per TAB
 set tabstop=4
