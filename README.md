@@ -40,3 +40,5 @@ Run `brew bundle install` to install brew formulas.
 
 Use `iterm2` terminal. Make sure that Powerline glyphs are enabled in the font preferences.
 
+To update brew bundles run `brew upgrade` and `brew cask upgrade --greedy`
+

@@ -9,6 +9,9 @@
       },
       "homebrew/core": {
         "revision": "0c1171b2b14855733d72f93cb89c593e85189725"
+      },
+      "homebrew/cask-fonts": {
+        "revision": "7bbf0dd885f48efc649e01229a16401affb87078"
       }
     },
     "brew": {
@@ -266,6 +269,81 @@
             }
           }
         }
+      },
+      "z": {
+        "version": "1.9",
+        "bottle": false
+      },
+      "zsh": {
+        "version": "5.8",
+        "bottle": {
+          "cellar": "/usr/local/Cellar",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/zsh-5.8.catalina.bottle.tar.gz",
+              "sha256": "209d04a4d62f6162f1b6cf824d2c50b00b52cb812c04c1967e5b376573b5aef0"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/zsh-5.8.mojave.bottle.tar.gz",
+              "sha256": "c5c35657637c97132efbaa0fd8e2add568aaa62adfe66e7d19f961f8e9506da9"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/zsh-5.8.high_sierra.bottle.tar.gz",
+              "sha256": "029b8c6922f01bfd832dd0f4f940f99328d2495714c37c1dc7ef326d6fb1459e"
+            }
+          }
+        }
+      },
+      "exercism": {
+        "version": "3.0.13",
+        "bottle": {
+          "cellar": ":any_skip_relocation",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/exercism-3.0.13.catalina.bottle.2.tar.gz",
+              "sha256": "9a4080f7e35f37dc4eb15e733692314cec32cba7e0f76e8f58eb99850f708cb1"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/exercism-3.0.13.mojave.bottle.2.tar.gz",
+              "sha256": "7319920cfd6779984dfabbecdf3e15a37603f6bfbecfc1121bfa2a044fb8ed17"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/exercism-3.0.13.high_sierra.bottle.2.tar.gz",
+              "sha256": "b094a8441575b02f312f04760589f94d9f2b1d76330c07a67f7d07a40ad561a9"
+            }
+          }
+        }
+      },
+      "yarn": {
+        "version": "1.22.4",
+        "bottle": false
+      },
+      "nmap": {
+        "version": "7.80_1",
+        "bottle": {
+          "cellar": "/usr/local/Cellar",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/nmap-7.80_1.catalina.bottle.tar.gz",
+              "sha256": "ada1fae22e64234618a2df68d1ef43f4f0a186b80fb80ccce927c1679df9d66f"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/nmap-7.80_1.mojave.bottle.tar.gz",
+              "sha256": "bc12b9340cf3c23ac9f5a4eb6102884baf556b2347f46c3971600b91fb081125"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/nmap-7.80_1.high_sierra.bottle.tar.gz",
+              "sha256": "3cbc937428a7db08be8fa106b3a70ffad16f4a4d80808d2113490dd9ab60786c"
+            },
+            "sierra": {
+              "url": "https://homebrew.bintray.com/bottles/nmap-7.80_1.sierra.bottle.tar.gz",
+              "sha256": "afa1fde2e44927ccb36447a0ce1dde08927ae67fd789afeb3883a95bd61edbc4"
+            }
+          }
+        }
       }
     },
     "cask": {
@@ -322,6 +400,102 @@
         "options": {
           "full_name": "google-chrome"
         }
+      },
+      "cyberduck": {
+        "version": "7.3.1.32784",
+        "options": {
+          "full_name": "cyberduck"
+        }
+      },
+      "keybase": {
+        "version": "5.4.2-20200424204055,7b0bbf1e3c",
+        "options": {
+          "full_name": "keybase"
+        }
+      },
+      "visual-studio-code": {
+        "version": "1.44.2",
+        "options": {
+          "full_name": "visual-studio-code"
+        }
+      },
+      "font-hack-nerd-font": {
+        "version": "2.1.0",
+        "options": {
+          "full_name": "font-hack-nerd-font"
+        }
+      },
+      "firefox": {
+        "version": "76.0",
+        "options": {
+          "full_name": "firefox"
+        }
+      },
+      "protonmail-bridge": {
+        "version": "1.2.6",
+        "options": {
+          "full_name": "protonmail-bridge"
+        }
+      },
+      "signal": {
+        "version": "1.33.4",
+        "options": {
+          "full_name": "signal"
+        }
+      },
+      "alfred": {
+        "version": "4.0.9_1144",
+        "options": {
+          "full_name": "alfred"
+        }
+      },
+      "android-studio": {
+        "version": "3.6.3.0,192.6392135",
+        "options": {
+          "full_name": "android-studio"
+        }
+      },
+      "1password": {
+        "version": "7.4.3",
+        "options": {
+          "full_name": "1password"
+        }
+      },
+      "nordvpn": {
+        "version": "5.5.4",
+        "options": {
+          "full_name": "nordvpn"
+        }
+      },
+      "slack": {
+        "version": "4.5.0",
+        "options": {
+          "full_name": "slack"
+        }
+      },
+      "the-unarchiver": {
+        "version": "4.2.1,128:1586456379",
+        "options": {
+          "full_name": "the-unarchiver"
+        }
+      },
+      "paintbrush": {
+        "version": "2.5.0",
+        "options": {
+          "full_name": "paintbrush"
+        }
+      },
+      "gimp": {
+        "version": "2.10.14",
+        "options": {
+          "full_name": "gimp"
+        }
+      },
+      "steam": {
+        "version": "latest",
+        "options": {
+          "full_name": "steam"
+        }
       }
     }
   },
@@ -333,7 +507,7 @@
         "Homebrew/homebrew-core": "0c1171b2b14855733d72f93cb89c593e85189725",
         "CLT": "11.0.33.8",
         "Xcode": "11.4.1",
-        "macOS": "10.15.4"
+        "macOS": "10.15.6"
       }
     }
   }
