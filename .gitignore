@@ -1,2 +1,3 @@
 *.local
 git/gitconfig.local.sample
+.DS_STORE

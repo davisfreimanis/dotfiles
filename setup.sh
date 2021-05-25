@@ -1,7 +1,7 @@
 #!/bin/sh
 
-dotfiles_dir=~/dotfiles
-backup_dir=~/dotfile_backup
+dotfilesDir=~/dotfiles
+backupDir=~/.dotfilesBackup
 
 # Cloning submodules
 git submodule init
@@ -19,25 +19,25 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # sudo rm -rf ~/.gitconfig.local > /dev/null 2>&1
 
 # Creating a backup of old dotfiles
-mkdir -p $backup_dir
-mv ~/.vim $backup_dir/.vim
-mv ~/.vimrc $backup_dir/.vimrc 
-mv ~/.zshrc $backup_dir/.zshrc
-mv ~/.tmux.conf $backup_dir/.tmux.conf
-mv ~/.gitconfig $backup_dir/.gitconfig
-mv ~/.gitconfig.local $backup_dir/.gitconfig.local
+mkdir -p $backupDir
+mv ~/.vim $backupDir/.vim
+mv ~/.vimrc $backupDir/.vimrc 
+mv ~/.zshrc $backupDir/.zshrc
+mv ~/.tmux.conf $backupDir/.tmux.conf
+mv ~/.gitconfig $backupDir/.gitconfig
+mv ~/.gitconfig.local $backupDir/.gitconfig.local
 
 # Linking new dotfiles
-ln -sf $dotfiles_dir/vim/vimrc ~/.vimrc
+ln -sf $dotfilesDir/vim/vimrc ~/.vimrc
 mkdir -p ~/.vim/bundle
-ln -sf $dotfiles_dir/vim/bundle/Vundle.vim ~/.vim/bundle/Vundle.vim
+ln -sf $dotfilesDir/vim/bundle/Vundle.vim ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 echo "Vundle installed."
 
-ln -sf $dotfiles_dir/zsh/zshrc ~/.zshrc
-ln -sf $dotfiles_dir/tmux/tmux.conf ~/.tmux.conf
+ln -sf $dotfilesDir/zsh/zshrc ~/.zshrc
+ln -sf $dotfilesDir/tmux/tmux.conf ~/.tmux.conf
 
-ln -sf $dotfiles_dir/git/gitconfig.local.sample ~/.gitconfig.local
-ln -sf $dotfiles_dir/git/gitconfig ~/.gitconfig
+ln -sf $dotfilesDir/git/gitconfig.local.sample ~/.gitconfig.local
+ln -sf $dotfilesDir/git/gitconfig ~/.gitconfig
 
 echo "Installation complete"
