@@ -55,8 +55,8 @@ NODE_GLOBALS+=("nvm")
 # Lazy load NVM and Node only when used to speed up shell startup
 # https://gist.github.com/fl0w/07ce79bd44788f647deab307c94d6922
 load_nvm() {
-	export NVM_DIR="$HOME/.nvm"
-	[ -s "$(brew --prefix nvm)/nvm.sh" ] && . "$(brew --prefix nvm)/nvm.sh"
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$(brew --prefix nvm)/nvm.sh" ] && . "$(brew --prefix nvm)/nvm.sh"
 }
 
 for cmd in "${NODE_GLOBALS[@]}"; do
@@ -64,6 +64,11 @@ for cmd in "${NODE_GLOBALS[@]}"; do
 done
 
 # Golang variables
-export GOROOT=/usr/local/go
+# export GOROOT=/usr/local/go
+export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME/go-workspace
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+# Android Studio
+export ANDROID_SDK=$HOME/Library/Android/sdk
+export PATH=$ANDROID_SDK/emulator:$ANDROID_SDK/tools:$PATH
